@@ -1,0 +1,12 @@
+{
+    "name": "project-name",
+    "version": "0.0.1",
+    "description": "",
+    "devDependencies": {
+        "browser-sync": "^2.26.5",
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.2.0",
+        "gulp-merge-media-queries": "^0.2.1",
+        "gulp-sass": "^4.0.2"
+    }
+}

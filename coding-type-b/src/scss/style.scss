@@ -1,0 +1,33 @@
+
+// @import 'common';
+// @import 'top';
+// @import 'news';
+
+
+
+$breakpoints: (
+	'sm': 'screen and (min-width: 400px)',
+	'md': 'screen and (min-width: 768px)',
+	'lg': 'screen and (min-width: 1000px)',
+	'xl': 'screen and (min-width: 1200px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+
+.foo {
+	color: blue;
+	@include mq() { // 引数を省略（初期値はmdの768px）
+		color: yellow;
+	}
+	@include mq(lg) { // 引数を個別に指定
+		color: red;
+	}
+	@include mq() { // 引数を省略（初期値はmdの768px）
+		font-size: 11px;
+	}
+}
